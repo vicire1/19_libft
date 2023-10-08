@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
@@ -9,7 +10,7 @@ void	ft_putstr(char const *s)
 		return ;
 	while (s[i])
 	{
-		write(1, &s[i], 1);
+		ft_putchar(s[i]);
 		i++;
 	}
 }

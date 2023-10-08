@@ -1,3 +1,5 @@
+#include "libft.h"
+
 void	ft_putstr_fd(char const *s, int fd)
 {
 	int	i;
@@ -7,7 +9,7 @@ void	ft_putstr_fd(char const *s, int fd)
 		return ;
 	while (s[i])
 	{
-		write(fd, &s[i], 1);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

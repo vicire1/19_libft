@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "libft.h"
 
-char *strncat(char *dest, char *src, size_t n)
+char	*ft_strncat(char *dest, char *src, size_t n)
 {
 	int	i;
 	int	j;

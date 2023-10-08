@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {
@@ -20,7 +21,7 @@ void	ft_putnbr(int n)
 	else
 	{
 		n = n + 48;
-		write(1, &n, 1);
+		ft_putchar(n);
 	}
 }
 

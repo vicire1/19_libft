@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <libft.h>
-
-int	ft_strlen(char *str);
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {

@@ -1,4 +1,6 @@
-char*	ft_strjoin(charconst*s1,charconst *s2)
+#include "libft.h"
+
+char    *ft_strjoin(char const *s1, char const *s2)
 {
 	
 }

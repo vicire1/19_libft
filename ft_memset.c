@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: victor <victor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:16:40 by victor            #+#    #+#             */
+/*   Created: 2023/10/10 18:16:15 by victor            #+#    #+#             */
 /*   Updated: 2023/10/10 18:19:31 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	int		i;
+	char	*a;
 
 	i = 0;
+	a = *s;
 	if (!s)
 		return (0);
-	while (s[i - 1])
+	while (i < n)
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		*a = c;
+		a++;
 		i++;
 	}
-	return (0);
-}
-
-int	main(void)
-{
-	int c = 0;
-	char* s = "Victor"
-	printf(
+	return ()
 }

@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:17:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/12 16:01:30 by vdecleir         ###   ########.fr       */
+/*   Created: 2023/10/12 16:03:23 by vdecleir          #+#    #+#             */
+/*   Updated: 2023/10/12 16:10:03 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+size_t	ft_strlen(const char *s);
+
+char	*ft_strdup(char *src)
 {
-	if (c > 96 && c < 123)
-		c = c - 32;
-	return (c);
-}
+	int		i;
+	char	*dup;
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{	
-	char c = '2';
-	
-	printf("My function : %c\nReal function : %c", ft_toupper(c), toupper(c));
+	i = 0;
+	if (!src)
+		return (0);
+	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	while (src[i])
+	{
+		dup[i] = src[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }

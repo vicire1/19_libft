@@ -1,46 +1,68 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 13:21:21 by victor            #+#    #+#             */
-/*   Updated: 2023/10/16 11:43:03 by vdecleir         ###   ########.fr       */
+/*   Created: 2023/10/16 15:06:39 by vdecleir          #+#    #+#             */
+/*   Updated: 2023/10/16 16:00:29 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	count_char(int n)
 {
-	int		i;
-	int		j;
-	char	*join;
+	int	i;
 
-	i = 0;
-	j = 0;
-	join = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (join == NULL)
-		return (NULL);
-	while (s1[i])
+	i = 1;
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
 	{
-		join[i] = s1[i];
+		n = -n;
 		i++;
 	}
-	while (s2[j])
+	while (n > 9)
 	{
-		join[i + j] = s2[j];
-		j++;
+		i++;
+		n = n / 10;
 	}
-	join [i + j] = '\0';
-	return (join);
+	return (i);
 }
 
+char	*ft_itoa(int n)
+{
+	char	*a;
+	int		i;
+	int		len;
+
+	i = 0;
+	len = count_char(n);
+	a = malloc(sizeof(char) * (len + 1));
+	if (a == NULL)
+		return (NULL);
+	a[len] = '\0';
+	len--;
+	if (n == -2147483648)
+		return ("-2147483648");
+	if (n < 0)
+	{
+		a[0] = '-';
+		n = -n;
+	}
+	while (n > 0)
+	{
+		a[len] = (n % 10) + 48;
+		n = n / 10;
+		len --;
+	}
+	return (a);
+}
 #include <stdio.h>
+
 int	main(void)
 {
-	char *s1 = "Vic";
-	char *s2 = "tor";
-	printf("%s", ft_strjoin(s1, s2));
+	printf("%s", ft_itoa(-21483648));
 }

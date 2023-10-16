@@ -6,7 +6,7 @@
 /*   By: victor <victor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:15:03 by victor            #+#    #+#             */
-/*   Updated: 2023/10/10 18:19:32 by victor           ###   ########.fr       */
+/*   Updated: 2023/10/15 13:27:01 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-    int i;
+	int		i;
+	char	*str;
 
-    i = 0;
+	i = 0;
+	str = (char *)s;
 	while (i < n)
 	{
-		*s = '\0';
+		*str = '\0';
 		i++;
 		s++;
 	}

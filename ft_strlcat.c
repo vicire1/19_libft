@@ -6,7 +6,7 @@
 /*   By: victor <victor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:40:42 by victor            #+#    #+#             */
-/*   Updated: 2023/10/13 18:39:51 by victor           ###   ########.fr       */
+/*   Updated: 2023/10/15 13:30:01 by victor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	while (src[j] && (i + j) < (size - 1))
 	{
-		src[j] = dst[i + j];
+		dst[i + j] = src[j];
 		j++;
 	}
 	dst[i + j] = '\0';
-	return (strlen(dst) + strlen(src));
+	return (ft_strlen(dst) + ft_strlen(src));
 }

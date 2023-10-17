@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:16 by victor            #+#    #+#             */
-/*   Updated: 2023/10/16 16:03:05 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:49:02 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_toupper(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
-void	*ft_calloc(size_t nmemb, size_t size); //a faire
+void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n); //a faire
@@ -49,6 +49,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_striteri(char *s, void (*f)(unsigned int, char*)); //a faire
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif

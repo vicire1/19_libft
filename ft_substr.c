@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:58:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/16 11:42:47 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:14:58 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	char	*s = "jgshgVictorkgsh";
+	printf("%s", ft_substr(s, 5, 6));
 }

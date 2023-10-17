@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/12 16:01:30 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:17:48 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_toupper(int c)
 
 int	main(void)
 {	
-	char c = '2';
+	char c = 'z';
 	
-	printf("My function : %c\nReal function : %c", ft_toupper(c), toupper(c));
+	printf("%c : %c", ft_toupper(c), toupper(c));
 }

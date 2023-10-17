@@ -6,13 +6,13 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:03:23 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/16 11:43:26 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	char	*dup;
@@ -30,4 +30,14 @@ char	*ft_strdup(char *src)
 	}
 	dup[i] = '\0';
 	return (dup);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char	s1[] = "Salut";
+	char	s2[] = "salut";
+	printf("%s\n%s", strdup(s1), ft_strdup(s2));
 }

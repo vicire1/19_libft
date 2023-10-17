@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victor <victor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:58 by victor            #+#    #+#             */
-/*   Updated: 2023/10/10 18:19:31 by victor           ###   ########.fr       */
+/*   Updated: 2023/10/17 17:00:11 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,35 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
 	i = 0;
 	if (!haystack || !needle)
 		return (0);
+	str = (char *)haystack;
 	if (needle[i] == '\0')
-		return (haystack);
-	while (haystack[i])
+		return (str);
+	while (str[i])
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j])
+		while (str[i + j] == needle[j] && (i + j) < len)
 		{
-			if (needle[j + 1] == '\0' || j == (len - 1))
-				return (&haystack[i]);
+			if (needle[j + 1] == '\0')
+				return (&str[i]);
 			j++;
 		}
 		i++;
 	}
 	return (0);
+}
+
+#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+	char	*haystack = "gfjashjgssssaluthsjs";
+	char	*needle = "salut";
+	printf("%s : %s", strnstr(haystack, needle, 16), ft_strnstr(haystack, needle, 16));
 }

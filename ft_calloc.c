@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:16:08 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 14:24:12 by vdecleir         ###   ########.fr       */
+/*   Created: 2023/10/17 17:32:15 by vdecleir          #+#    #+#             */
+/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	char	*pt1;
-	char	*pt2;
+	char	*array;
 
-	i = 0;
-	pt1 = (char *)dest;
-	pt2 = (char *)src;
-	if (!dest || !src)
-		return (0);
-	while (i < n)
-	{
-		pt1[i] = pt2[i];
-		i++;
-	}
-	return (dest);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	array = malloc(size * (nmemb + 1));
+	if (array == NULL)
+		return (NULL);
+	ft_bzero(array, nmemb + 1);
+	return (array);
 }
-
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	char	dest[] = "test1234";
-	char	src[] = "1234test";
-
-	printf("%s\n%s", ft_memcpy(dest, src, 9), memcpy(dest, src, 9));
+	ft_calloc(6, 1);
 }

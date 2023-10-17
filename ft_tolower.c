@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: victor <victor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:07 by victor            #+#    #+#             */
-/*   Updated: 2023/10/10 18:19:31 by victor           ###   ########.fr       */
+/*   Updated: 2023/10/17 17:16:32 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_tolower(int c)
 
 int	main(void)
 {	
-	char c = '3';
-	printf("My function : %c\nReal function : %c", ft_tolower(c), tolower(c));
+	char c = 'Z';
+	printf("%c : %c", ft_tolower(c), tolower(c));
 }
 

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:15:03 by victor            #+#    #+#             */
-/*   Updated: 2023/10/16 17:06:40 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:25:53 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
 	char	*str;
 
-	i = 0;
 	str = (char *)s;
-	while (i < n)
+	while (n)
 	{
-		*str = '\0';
-		i++;
-		s++;
+		str[n - 1] = '\0';
+		n--;
 	}
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char s[] = "Victor";
+	char t[] = "Victor";
+	ft_bzero(s, 1);
+	bzero(t, 1);
+	printf("s0 : %c t0 : %c\ns2 : %c t2 : %c", s[0], t[0], s[1], t[1]);
 }

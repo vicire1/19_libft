@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:45:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/16 15:06:12 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	tab[count_tabs(s, c)] = 0;
 	return (tab);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -102,4 +102,4 @@ int	main(void)
 		printf("%s\n", tab[a]);
 		a++;
 	}
-}
+}*/

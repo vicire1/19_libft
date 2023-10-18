@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:32:15 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(array, nmemb + 1);
 	return (array);
 }
-
+/*
 int	main(void)
 {
 	ft_calloc(6, 1);
 }
+*/

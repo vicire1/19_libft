@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:30 by victor            #+#    #+#             */
-/*   Updated: 2023/10/16 17:09:11 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 17:18:06 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{

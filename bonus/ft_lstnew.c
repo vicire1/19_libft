@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:15:59 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 17:26:11 by vdecleir         ###   ########.fr       */
+/*   Created: 2023/10/18 11:52:30 by vdecleir          #+#    #+#             */
+/*   Updated: 2023/10/18 14:36:13 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "bonus.h"
 
-int	ft_isprint(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	t_list	*head;
+
+	head = malloc(sizeof(t_list));
+	if (head == NULL)
+		return (NULL);
+	head->content = content;
+	head->next = NULL;
+	return (head);
 }

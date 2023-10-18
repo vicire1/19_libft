@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:06:39 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/16 16:00:29 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 18:20:49 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,10 @@ int	count_char(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+void	int_cpy(int n, int len, char *a)
 {
-	char	*a;
-	int		i;
-	int		len;
-
-	i = 0;
-	len = count_char(n);
-	a = malloc(sizeof(char) * (len + 1));
-	if (a == NULL)
-		return (NULL);
-	a[len] = '\0';
-	len--;
-	if (n == -2147483648)
-		return ("-2147483648");
+	if (n == 0)
+		a[0] = '0';
 	if (n < 0)
 	{
 		a[0] = '-';
@@ -58,11 +47,37 @@ char	*ft_itoa(int n)
 		n = n / 10;
 		len --;
 	}
+}
+
+char	*ft_itoa(int n)
+{
+	char	*a;
+	int		i;
+	int		len;
+	char	*tmp;
+
+	i = 0;
+	len = count_char(n);
+	a = malloc(sizeof(char) * (len + 1));
+	if (a == NULL)
+		return (NULL);
+	a[len] = '\0';
+	len--;
+	if (n == -2147483648)
+	{
+		tmp = "-2147483648";
+		i = -1;
+		while (++i <= len)
+			a[i] = tmp[i];
+	}
+	else
+		int_cpy(n, len, a);
 	return (a);
 }
+/**/
 #include <stdio.h>
 
-int	main(void)
+/* int	main(void)
 {
-	printf("%s", ft_itoa(-21483648));
-}
+	printf("%s", ft_itoa(-2147483648));
+} */

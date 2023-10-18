@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:58 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 17:00:11 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:43:35 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
+/*
 #include <string.h>
 #include <stdio.h>
 int	main(void)
@@ -46,4 +47,4 @@ int	main(void)
 	char	*haystack = "gfjashjgssssaluthsjs";
 	char	*needle = "salut";
 	printf("%s : %s", strnstr(haystack, needle, 16), ft_strnstr(haystack, needle, 16));
-}
+}*/

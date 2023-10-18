@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:03:23 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *src)
 	dup[i] = '\0';
 	return (dup);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -40,4 +40,4 @@ int	main(void)
 	char	s1[] = "Salut";
 	char	s2[] = "salut";
 	printf("%s\n%s", strdup(s1), ft_strdup(s2));
-}
+}*/

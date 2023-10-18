@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:08 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 14:24:12 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -40,4 +40,4 @@ int	main(void)
 	char	src[] = "1234test";
 
 	printf("%s\n%s", ft_memcpy(dest, src, 9), memcpy(dest, src, 9));
-}
+}*/

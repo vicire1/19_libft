@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:54:12 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 14:15:22 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (pt1[i] - pt2[i]);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -37,4 +37,4 @@ int	main(void)
 	char	s1[] = "AABBA";
 	char	s2[] = "AABBA";
 	printf("%d : %d", memcmp(s1, s2, 10), ft_memcmp(s1, s2, 10));
-}
+}*/

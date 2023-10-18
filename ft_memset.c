@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:15 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 18:07:16 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -37,4 +37,4 @@ int	main(void)
 	char	s[] = "123456789";
 	char	t[] = "123456789";
 	printf("%s\n%s", ft_memset(s, '9', 1), memset(t, '9', 1));
-}
+}*/

@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 18:15:59 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 17:26:11 by vdecleir         ###   ########.fr       */
+/*   Created: 2023/10/18 13:22:07 by vdecleir          #+#    #+#             */
+/*   Updated: 2023/10/18 13:24:50 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "bonus.h"
 
-int	ft_isprint(int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+
 }

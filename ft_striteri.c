@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 16:06:43 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:43:13 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-

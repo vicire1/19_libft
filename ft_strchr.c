@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:40 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 14:53:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
 	char	s[] = "salut";
 	printf("%s\n%s", ft_strchr(s, 's'), strchr(s, 's'));
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 14:19:00 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 14:31:21 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 17:21:47 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	end(char *s1, char *set)
+int	end(char const *s1, char const *set)
 {
 	int	len;
 	int	count;
@@ -41,7 +41,7 @@ int	end(char *s1, char *set)
 	return (count);
 }
 
-int	beg(char *s1, char *set)
+int	beg(char const *s1, char const *set)
 {
 	int	i;
 
@@ -70,16 +70,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (s1[i + j + end(s1, set)])
 	{
-		new[j] = s1[i + j];
+		new[j] = (char)s1[i + j];
 		j++;
 	}
 	new[j] = '\0';
 	return (new);
 }
+
+/*
 #include <stdio.h>
 int	main(void)
 {
 	char *s1 = "Salut ca va bien toi?";
 	char *set = "Salcoib?";
 	printf("%s", ft_strtrim(s1, set));
-}
+}*/

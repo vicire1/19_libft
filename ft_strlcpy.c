@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:41:07 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 18:05:52 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 
@@ -43,4 +43,4 @@ int	main(void)
 	ft_strlcpy(dest2, src, 4);
 	printf("%s : %s\n", dest1, dest2);
 	printf("%lu : %lu", strlcpy(dest1, src, 4), ft_strlcpy(dest2, src, 4));
-}
+}*/

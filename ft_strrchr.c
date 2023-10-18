@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:02 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 17:07:38 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		return (&str[a]);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
 	char	*s = "kayakydaabjjskjis";
 	printf("%s : %s", strrchr(s, 'z'), ft_strrchr(s, 'z'));
-}
+}*/

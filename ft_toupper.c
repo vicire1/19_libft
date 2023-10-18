@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/17 17:17:48 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 
@@ -27,4 +27,4 @@ int	main(void)
 	char c = 'z';
 	
 	printf("%c : %c", ft_toupper(c), toupper(c));
-}
+}*/

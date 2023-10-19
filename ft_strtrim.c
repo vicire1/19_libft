@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 14:19:00 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 17:21:47 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:48:08 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,28 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	end(char const *s1, char const *set)
+int	nb_set(char const *s1, char const *set)
 {
-	int	len;
+	int	i;
 	int	count;
 
+	i = 0;
 	count = 0;
-	len = ft_strlen(s1);
-	while (check_set(s1[len - 1], set) == 1)
+	while (check_set(s1[i], set) == 1)
 	{
-		len--;
+		i++;
+		count++;
+	}
+	if (!(s1[i]))
+		return (count);
+	while (s1[i])
+		i++;
+	while (check_set(s1[i - 1], set) == 1)
+	{
+		i--;
 		count++;
 	}
 	return (count);
-}
-
-int	beg(char const *s1, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (check_set(s1[i], set) == 1)
-		i++;
-	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -63,12 +62,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (0);
 	len = ft_strlen(s1);
-	new = malloc(sizeof(char) * (len - beg(s1, set) - end(s1, set) + 1));
+	new = malloc(sizeof(char) * (len - nb_set(s1, set) + 1));
 	if (new == NULL)
 		return (NULL);
 	while (check_set(s1[i], set) == 1)
 		i++;
-	while (s1[i + j + end(s1, set)])
+	while (s1[j + nb_set(s1, set)])
 	{
 		new[j] = (char)s1[i + j];
 		j++;
@@ -81,7 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int	main(void)
 {
-	char *s1 = "Salut ca va bien toi?";
-	char *set = "Salcoib?";
+	char *s1 = "            ";
+	char *set = " ";
 	printf("%s", ft_strtrim(s1, set));
 }*/

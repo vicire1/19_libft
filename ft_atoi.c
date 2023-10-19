@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:14:40 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 17:02:23 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:23:28 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,8 @@ int	ft_atoi(char *str)
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(int ac, char *av[])
+int	main(void)
 {
-	if (ac > 1)
-	{
-		printf("%d\n", ft_atoi(av[1]));
-		printf("%d\n", atoi(av[1]));
-	}
+	printf("%d\n", ft_atoi("   +10"));
+	printf("%d\n", atoi("   +10"));
 }*/

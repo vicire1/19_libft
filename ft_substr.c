@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:58:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:09:00 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (0);
-	sub = malloc(sizeof(char) * (len + 1));
+	while (i < len && start + i < ft_strlen(s))
+		i++;
+	sub = malloc(sizeof(char) * (i + 1));
 	if (sub == NULL)
 		return (NULL);
-	while (s[start + i] && i < len)
+	i = 0;
+	while (i < len && start + i < ft_strlen(s))
 	{
 		sub[i] = s[start + i];
 		i++;
@@ -36,5 +39,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char	*s = "jgshgVictorkgsh";
-	printf("%s", ft_substr(s, 5, 6));
+	printf("%s", ft_substr(s, 100, 4));
 }*/

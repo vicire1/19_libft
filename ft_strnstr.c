@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:58 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 16:43:35 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:26:16 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ int	main(void)
 {
 	char	*haystack = "gfjashjgssssaluthsjs";
 	char	*needle = "salut";
-	printf("%s : %s", strnstr(haystack, needle, 16), ft_strnstr(haystack, needle, 16));
+	printf("%s : %s", strnstr(haystack, needle, 16), ft_strnstr(haystack,
 }*/

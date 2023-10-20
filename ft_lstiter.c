@@ -6,11 +6,11 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:22:07 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 13:24:50 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:02:27 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:02 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 17:09:33 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:27:55 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int				a;
 	int				i;
-	char		*str;
+	char			*str;
 
 	i = 0;
 	a = -1;

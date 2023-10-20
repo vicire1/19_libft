@@ -6,17 +6,19 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:20:06 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 16:06:57 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:59:50 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	current = &lst;
+	current = *lst;
+	if (!lst)
+		return ;
 	while (current->next != NULL)
 		current = current->next;
 	current->next = new;

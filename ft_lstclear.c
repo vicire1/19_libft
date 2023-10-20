@@ -6,11 +6,11 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:21:26 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 13:24:38 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:02:23 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:16 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 13:14:52 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:58:36 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
@@ -50,5 +56,14 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+int		ft_lstsize(t_list *lst); // a faire
+t_list	*ft_lstlast(t_list *lst); // a faire
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)); // a faire
+t_list	*ft_lstnew(void *content); // a faire
+void	ft_lstadd_back(t_list **lst, t_list *new); // a faire
+void	ft_lstclear(t_list **lst, void (*del)(void *)); // a faire
+void	ft_lstdelone(t_list *lst, void (*del)(void *)); // a faire
+void	ft_lstiter(t_list *lst, void (*f)(void *)); // a faire
+void	ft_lstadd_front(t_list **lst, t_list *new); // a faire
 
 #endif

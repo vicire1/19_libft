@@ -6,7 +6,7 @@
 #    By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 18:00:13 by vdecleir          #+#    #+#              #
-#    Updated: 2023/10/19 18:26:31 by vdecleir         ###   ########.fr        #
+#    Updated: 2023/10/20 13:17:40 by vdecleir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,27 +53,26 @@ SRCS	 	= 	ft_atoi.c \
 
 SRCSBON =		ft_lstadd_back.c \
 				ft_lstadd_front.c \
-				ft_lstclear.c \
-				ft_lstdelone.c \
-				ft_lstiter.c \
 				ft_lstlast.c \
-				ft_lstmap.c \
 				ft_lstnew.c \
 				ft_lstsize.c 
 
-INCLUDESDIR	= -I libft.h
+INCLUDES	= -I libft.h
 
 OBJECTS	= $(SRCS:.c=.o)
 
-OBJECTS_BONUS = $(SRCSBON: .c=.o)
+OBJECTSBON = $(SRCSBON:.c=.o)
 
 RM			= rm -f
 
 %.o:		%.c
-			$(CC) $(CFLAGS) $(INCLUDESDIR) -c $< -o $@
+			$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(NAME):	$(OBJECTS)
 			ar -rcs $(NAME) $(OBJECTS)
+			
+bonus:		$(OBJECTSBON)
+			ar -rcs $(NAME) $(OBJECTSBON)
 
 all:		$(NAME)
 
@@ -84,8 +83,6 @@ clean:
 fclean:		clean
 			$(RM) $(NAME)
 
-re:			fclean all
-
-bonus		
+re:			fclean all	
 
 .PHONY: 	all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:45:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:30:30 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,19 @@ int	split_strlen(char const *s, char c, int i)
 	return (count);
 }
 
+char	*freeall(char **tab, size_t i)
+{
+	while (i > 0)
+	{
+		free(tab[i]);
+		tab[i] = NULL;
+		i--;
+	}
+	free(tab);
+	tab = NULL;
+	return (*tab);
+}
+
 void	cpy_in_tab(char **tab, char const *s, char c)
 {
 	int	a;
@@ -59,8 +72,8 @@ void	cpy_in_tab(char **tab, char const *s, char c)
 		while (s[i] == c && s[i])
 			i++;
 		tab[a] = malloc(sizeof(char) * (split_strlen(s, c, i) + 1));
-		if (tab == NULL)
-			return ;
+		if (tab[a] == NULL)
+			freeall(tab, count_tabs(s, c));
 		while (s[i] && s[i] != c)
 		{
 			tab[a][b] = s[i];
@@ -96,7 +109,7 @@ int	main(void)
 	char	**tab;
 
 	a = 0;
-	tab = ft_split("alut sa va ssuper bien ajssss si sou", 's');
+	tab = ft_split("hello!", ' ');
 	while (tab[a] != 0)
 	{
 		printf("%s\n", tab[a]);

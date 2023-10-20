@@ -6,13 +6,15 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:16:59 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 15:25:45 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:57:44 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!new)
+		return ;
 	new->next = *lst;
 }

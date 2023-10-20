@@ -6,11 +6,11 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:52:30 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 14:36:13 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:02:32 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

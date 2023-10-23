@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:52:30 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/20 13:02:32 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/23 19:19:01 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*head;
+	t_list	*new;
 
-	head = malloc(sizeof(t_list));
-	if (head == NULL)
+	new = malloc(sizeof(t_list));
+	if (new == NULL)
 		return (NULL);
-	head->content = content;
-	head->next = NULL;
-	return (head);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

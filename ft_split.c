@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:45:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/23 17:54:39 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/23 19:16:23 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*freeall(char **tab, size_t i)
 	return (*tab);
 }
 
-int	cpy_in_tab(char **tab, char const *s, char c)
+void	cpy_in_tab(char **tab, char const *s, char c)
 {
 	int	a;
 	int	b;
@@ -65,7 +65,7 @@ int	cpy_in_tab(char **tab, char const *s, char c)
 	a = 0;
 	i = 0;
 	if (!tab)
-		return (0);
+		return ;
 	while (a < count_tabs(s, c))
 	{
 		b = 0;
@@ -73,10 +73,7 @@ int	cpy_in_tab(char **tab, char const *s, char c)
 			i++;
 		tab[a] = malloc(sizeof(char) * (split_strlen(s, c, i) + 1));
 		if (tab[a] == NULL)
-		{
 			freeall(tab, count_tabs(s, c));
-			return (0);
-		}
 		while (s[i] && s[i] != c)
 		{
 			tab[a][b] = s[i];
@@ -86,7 +83,6 @@ int	cpy_in_tab(char **tab, char const *s, char c)
 		tab[a][b] = '\0';
 		a++;
 	}
-	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -101,8 +97,6 @@ char	**ft_split(char const *s, char c)
 	if (tab == NULL)
 		return (NULL);
 	cpy_in_tab(tab, s, c);
-	if (cpy_in_tab(tab, s, c) == 0)
-		return (NULL);
 	tab[count_tabs(s, c)] = 0;
 	return (tab);
 }

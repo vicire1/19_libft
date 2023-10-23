@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:58:11 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 14:09:00 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:37:45 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 #include <stdio.h>
 int	main(void)
 {
-	char	*s = "jgshgVictorkgsh";
-	printf("%s", ft_substr(s, 100, 4));
+	char	*s = "";
+	printf("value :%s", ft_substr(s, 0, 0));
 }*/

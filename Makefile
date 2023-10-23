@@ -6,7 +6,7 @@
 #    By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 18:00:13 by vdecleir          #+#    #+#              #
-#    Updated: 2023/10/20 13:17:40 by vdecleir         ###   ########.fr        #
+#    Updated: 2023/10/23 18:23:48 by vdecleir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,11 @@ SRCSBON =		ft_lstadd_back.c \
 				ft_lstadd_front.c \
 				ft_lstlast.c \
 				ft_lstnew.c \
-				ft_lstsize.c 
+				ft_lstsize.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c\
+				ft_lstmap.c
 
 INCLUDES	= -I libft.h
 
@@ -78,11 +82,11 @@ all:		$(NAME)
 
 
 clean:
-			$(RM) $(OBJECTS)
+			$(RM) $(OBJECTS) $(OBJECTSBON)
 
 fclean:		clean
 			$(RM) $(NAME)
 
-re:			fclean all	
+re:			fclean all
 
-.PHONY: 	all clean fclean re
+.PHONY: 	all clean fclean re bonus

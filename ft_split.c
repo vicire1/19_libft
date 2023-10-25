@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:45:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/25 12:13:29 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:40:14 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	int		a;
+	int		a;s
 	char	**tab;
 
 	a = 0;

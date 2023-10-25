@@ -6,13 +6,13 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 14:19:00 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 13:48:08 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:14:33 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_set(char c, char const *set)
+static int	check_set(char c, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	check_set(char c, char const *set)
 	return (0);
 }
 
-int	nb_set(char const *s1, char const *set)
+static int	nb_set(char const *s1, char const *set)
 {
 	int	i;
 	int	count;

@@ -6,13 +6,13 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:45:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/23 19:16:23 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:13:29 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_tabs(char const *s, char c)
+static int	count_tabs(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -33,7 +33,7 @@ int	count_tabs(char const *s, char c)
 	return (count);
 }
 
-int	split_strlen(char const *s, char c, int i)
+static int	split_strlen(char const *s, char c, int i)
 {
 	int	count;
 
@@ -43,7 +43,7 @@ int	split_strlen(char const *s, char c, int i)
 	return (count);
 }
 
-char	*freeall(char **tab, size_t i)
+static char	**freeall(char **tab, int i)
 {
 	while (i >= 0)
 	{
@@ -53,10 +53,10 @@ char	*freeall(char **tab, size_t i)
 	}
 	free(tab);
 	tab = NULL;
-	return (*tab);
+	return (tab);
 }
 
-void	cpy_in_tab(char **tab, char const *s, char c)
+static int	cpy_in_tab(char **tab, char const *s, char c)
 {
 	int	a;
 	int	b;
@@ -64,8 +64,6 @@ void	cpy_in_tab(char **tab, char const *s, char c)
 
 	a = 0;
 	i = 0;
-	if (!tab)
-		return ;
 	while (a < count_tabs(s, c))
 	{
 		b = 0;
@@ -73,7 +71,7 @@ void	cpy_in_tab(char **tab, char const *s, char c)
 			i++;
 		tab[a] = malloc(sizeof(char) * (split_strlen(s, c, i) + 1));
 		if (tab[a] == NULL)
-			freeall(tab, count_tabs(s, c));
+			return (a);
 		while (s[i] && s[i] != c)
 		{
 			tab[a][b] = s[i];
@@ -83,11 +81,13 @@ void	cpy_in_tab(char **tab, char const *s, char c)
 		tab[a][b] = '\0';
 		a++;
 	}
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		a;
+	int		cpy;
 	char	**tab;
 
 	a = 0;
@@ -96,7 +96,9 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (count_tabs(s, c) + 1));
 	if (tab == NULL)
 		return (NULL);
-	cpy_in_tab(tab, s, c);
+	cpy = cpy_in_tab(tab, s, c);
+	if (cpy != -1)
+		return (freeall(tab, cpy));
 	tab[count_tabs(s, c)] = 0;
 	return (tab);
 }
@@ -109,7 +111,7 @@ int	main(void)
 	char	**tab;
 
 	a = 0;
-	tab = ft_split("hello!", ' ');
+	tab = ft_split("   hello ! jfshjs jghsjhhjhhjdh         ygsuybs", ' ');
 	while (tab[a] != 0)
 	{
 		printf("%s\n", tab[a]);

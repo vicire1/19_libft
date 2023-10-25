@@ -6,13 +6,13 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:06:39 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/19 11:36:44 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 12:12:26 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_char(int n)
+static int	count_char(int n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	count_char(int n)
 	return (i);
 }
 
-void	int_cpy(int n, int len, char *a)
+static void	int_cpy(int n, int len, char *a)
 {
 	if (n == 0)
 		a[0] = '0';

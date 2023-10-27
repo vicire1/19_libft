@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:23:01 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/23 18:48:53 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:27:22 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*first;
 	t_list	*current;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (0);
 	first = 0;
 	while (lst)

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:21:26 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/23 18:56:40 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/25 13:23:04 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 
 	current = *lst;
-	if (*lst == NULL || lst == NULL)
+	if (*lst == NULL || lst == NULL || !del)
 		return ;
 	while (current)
 	{

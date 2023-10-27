@@ -6,17 +6,30 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:14:40 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 14:23:28 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:47:20 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static unsigned long long	excpetion(unsigned long long nb, int sign)
+{
+	if (nb > 9223372036854775807)
+	{
+		if (sign < 0)
+			return (0);
+		if (sign > 0)
+			return (-1);
+	}
+	return (nb);
+}
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	sign;
-	int	nb;
+	int					i;
+	int					sign;
+	unsigned long long	nb;
 
 	i = 0;
 	sign = 1;
@@ -31,19 +44,19 @@ int	ft_atoi(char *str)
 			sign = -sign;
 		i++;
 	}
-	while (str[i] > 47 && str[i] < 58)
+	while (str[i] > 47 && str[i] < 58 && nb < 9223372036854775807)
 	{
 		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
+	nb = excpetion(nb, sign);
 	return (nb * sign);
 }
 /*
-#include <stdio.h>
 #include <stdlib.h>
 
 int	main(void)
 {
-	printf("%d\n", ft_atoi("   +10"));
-	printf("%d\n", atoi("   +10"));
+	printf("%d\n", ft_atoi("-922337203685477580855555"));
+	printf("%d\n", atoi("-922337203685477580855555"));
 }*/

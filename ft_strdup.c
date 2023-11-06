@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:03:23 by vdecleir          #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:58:12 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *src)
 	char	*dup;
 
 	i = 0;
-	if (!src)
-		return (0);
 	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (dup == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:40 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 17:10:33 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:53:10 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *)s;
 	i = 0;
-	if (!s)
-		return (0);
 	while (s[i])
 	{
 		if (s[i] == (unsigned char)c)

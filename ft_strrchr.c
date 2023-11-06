@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:17:02 by victor            #+#    #+#             */
-/*   Updated: 2023/10/20 12:27:55 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:52:57 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	a = -1;
-	if (!s)
-		return (0);
 	str = (char *)s;
 	while (str[i])
 	{

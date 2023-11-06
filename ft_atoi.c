@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:14:40 by victor            #+#    #+#             */
-/*   Updated: 2023/10/27 11:47:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 08:03:21 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static unsigned long long	excpetion(unsigned long long nb, int sign)
 	return (nb);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int					i;
 	int					sign;
@@ -34,8 +34,6 @@ int	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	if (!str)
-		return (0);
 	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
 		i++;
 	if (str[i] == 45 || str[i] == 43)

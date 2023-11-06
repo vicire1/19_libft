@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:54:12 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:53:44 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	pt1 = (unsigned char *)s1;
 	pt2 = (unsigned char *)s2;
-	if (!s1 || !s2)
-		return (0);
 	if (n == 0)
 		return (0);
 	while (pt1[i] == pt2[i] && i < n - 1)

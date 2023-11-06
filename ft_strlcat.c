@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:40:42 by victor            #+#    #+#             */
-/*   Updated: 2023/10/20 11:44:26 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:52:35 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	j = 0;
 	len_dst = ft_strlen(dst);
-	if (!dst || !src)
-		return (0);
 	while (dst[i])
 		i++;
 	if (size != 0)

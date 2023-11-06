@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:16:58 by victor            #+#    #+#             */
-/*   Updated: 2023/10/19 14:26:16 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 07:54:31 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*str;
 
 	i = 0;
-	if (!haystack || !needle)
-		return (0);
 	str = (char *)haystack;
 	if (needle[i] == '\0')
 		return (str);

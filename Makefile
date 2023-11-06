@@ -6,7 +6,7 @@
 #    By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 18:00:13 by vdecleir          #+#    #+#              #
-#    Updated: 2023/10/23 18:23:48 by vdecleir         ###   ########.fr        #
+#    Updated: 2023/11/06 11:50:54 by vdecleir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRCS	 	= 	ft_atoi.c \
 				ft_tolower.c \
 				ft_toupper.c
 
-SRCSBON =		ft_lstadd_back.c \
-				ft_lstadd_front.c \
-				ft_lstlast.c \
-				ft_lstnew.c \
-				ft_lstsize.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c\
-				ft_lstmap.c
+SRCSBON =		_bonus_ft_lstadd_back.c \
+				_bonus_ft_lstadd_front.c \
+				_bonus_ft_lstlast.c \
+				_bonus_ft_lstnew.c \
+				_bonus_ft_lstsize.c \
+				_bonus_ft_lstdelone.c \
+				_bonus_ft_lstclear.c \
+				_bonus_ft_lstiter.c\
+				_bonus_ft_lstmap.c
 
 INCLUDES	= -I libft.h
 

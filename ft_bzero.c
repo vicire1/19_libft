@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:15:03 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:23:49 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
+	size_t	i;
 
+	i = 0;
 	str = (char *)s;
-	while (n)
+	while (i < n)
 	{
-		str[n - 1] = '\0';
-		n--;
+		str[i] = '\0';
+		i++;
 	}
 }
 /*

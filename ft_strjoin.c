@@ -6,7 +6,7 @@
 /*   By: vdecleir <vdecleir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:21:21 by victor            #+#    #+#             */
-/*   Updated: 2023/10/18 16:39:20 by vdecleir         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:58:10 by vdecleir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	join = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (join == NULL)
 		return (NULL);
@@ -36,11 +38,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join [i + j] = '\0';
 	return (join);
 }
-/*
-#include <stdio.h>
+
+/* #include <stdio.h>
 int	main(void)
 {
-	char *s1 = "Vic";
-	char *s2 = "tor";
+	char *s1 = NULL;
+	char *s2 = NULL;
 	printf("%s", ft_strjoin(s1, s2));
-}*/
+} */

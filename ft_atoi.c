@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static unsigned long long	excpetion(unsigned long long nb, int sign)
 {

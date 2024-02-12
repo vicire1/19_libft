@@ -86,11 +86,9 @@ static int	cpy_in_tab(char **tab, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		a;
 	int		cpy;
 	char	**tab;
 
-	a = 0;
 	if (!s)
 		return (0);
 	tab = malloc(sizeof(char *) * (count_tabs(s, c) + 1));

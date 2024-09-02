@@ -33,26 +33,31 @@ To compile the library, ensure that you have a Makefile with the following rules
 
    ```bash
    make
+   ```
 
 2. **Clean object files:**
 
    ```bash
    make clean
+   ```
 
 3. **Remove all generated files, including the library:**
 
    ```bash
    make fclean
+   ```
 
 4. **Recompile everything from scratch:**
 
    ```bash
    make re
+   ```
 
 5. **Include bonus functions:**
 
    ```bash
    make bonus
+   ```
 
 ## Usage
 
@@ -74,3 +79,4 @@ To compile a program using Libft:
 
 ```bash
 gcc -Wall -Wextra -Werror -L[path_to_libft.a] -lft your_program.c -o your_program
+```

@@ -1,6 +1,6 @@
 # Libft
 
-![libft](https://github.com/vicire1/libft/assets/111586308/ece8c029-1b9c-4392-ae05-e287532646f7)
+<img width="663" alt="Screen Shot 2024-09-02 at 5 48 49 PM" src="https://github.com/user-attachments/assets/50c9b7a4-db9b-4d56-b5b4-9505e30bbe60">
 
 ## Description
 

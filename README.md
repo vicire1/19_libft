@@ -68,6 +68,7 @@ int main(void) {
     free(str);
     return (0);
 }
+```
 
 To compile a program using Libft:
 

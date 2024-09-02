@@ -27,8 +27,6 @@ The **Libft** project involves creating a C library that contains standard C lib
 
 ## Compilation
 
-To compile the library, ensure that you have a Makefile with the following rules: `all`, `clean`, `fclean`, `re`, and `bonus` (if applicable).
-
 1. **Compile the library:**
 
    ```bash
